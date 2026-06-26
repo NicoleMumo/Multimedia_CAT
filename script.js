@@ -1,5 +1,5 @@
 function toggleVideo() {
-    const video = document.getElementById("wildlifeVideo");
+    const video = document.getElementById("video");
     const button = document.getElementById("videoToggleBtn");
 
     if (video.style.display === "none") {
