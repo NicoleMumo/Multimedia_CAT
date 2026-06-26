@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Save Our Wildlife</title>
-
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Save Our Wildlife</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <h1>Save Our Wildlife</h1>
 
-<video id="video" controls>
+<video id="video" controls aria-label="Wildlife promotional video">
     <source src="wildlife.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
 
 <p>
-Wildlife plays an important role in maintaining nature.
-Protecting animals today ensures a better future for tomorrow.
+Protect wildlife by conserving habitats and protecting endangered species for future generations.
 </p>
 
-<button onclick="toggleVideo()">
-Play / Hide Video
+<button onclick="toggleVideo()" aria-label="Play or hide video">
+    Play / Hide Video
 </button>
 
 <script src="script.js"></script>
