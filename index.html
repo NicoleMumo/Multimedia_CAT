@@ -4,14 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Save Our Wildlife</title>
-  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <h1>Save Our Wildlife</h1>
 
-  <video id="video" controls aria-label="Wildlife promotional video">
-    <source src="wildlife.mp4" type="video/mp4">
+  <video id="wildlifeVideo" controls width="640">
+    <source src="wildlife.MP4" type="video/MP4">
     Your browser does not support the video tag.
   </video>
 
@@ -19,10 +18,27 @@
     Protect wildlife by conserving habitats and protecting endangered species for future generations.
   </p>
 
-  <button id="videoToggleBtn" onclick="toggleVideo()" aria-label="Play or hide video">
-    Play / Hide Video
-  </button>
+  <button id="videoToggleBtn" onclick="toggleVideo()">Play / Hide Video</button>
 
-  <script src="script.js"></script>
+  <script>
+    function toggleVideo() {
+      const video = document.getElementById("wildlifeVideo");
+      const button = document.getElementById("videoToggleBtn");
+
+      if (video.style.display === "none") {
+        video.style.display = "block";
+        video.play();
+        button.textContent = "Pause Video";
+      } else if (video.paused) {
+        video.play();
+        button.textContent = "Pause Video";
+      } else {
+        video.pause();
+        video.style.display = "none";
+        button.textContent = "Play Video";
+      }
+    }
+  </script>
+
 </body>
 </html>
